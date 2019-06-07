@@ -23,7 +23,6 @@ def giveAgeGroup(i): #A function for assisting in output display
 
 
 data = pd.read_csv('titanic.csv',usecols = ['Pclass','Sex','Age']) #Accessing data from the target .csv file 
-#data.replace(r'^\s*$', np.nan, regex = True)
 data = data.fillna(data['Age'].mean()) #We don't want ages throwing off the classifier, hence the mean replacement
 data = data.replace(r'^male$', 0, regex = True) #Tokenization of the gender field
 data = data.replace(r'^female$', 1, regex = True) 
