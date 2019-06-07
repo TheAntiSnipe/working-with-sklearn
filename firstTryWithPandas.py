@@ -64,3 +64,47 @@ for i in range(1,4): #Gaining an insight as to how various factors came into pla
 			ageGroup = giveAgeGroup(k)
 			probabilityOfSurvival = round(clf.predict([[i,j,k]])[0]*100,3)
 			print("||",psgClass," \t|",gender," \t|",ageGroup,"  \t|",probabilityOfSurvival,"  \t\t||")
+
+
+
+#Observed output:
+
+'''
+λ python firstTryWithPandas.py
+
+
+
+The table below illustrates the statistical analysis of how probable an individual's
+survival would be under certain conditions. Note that the probabilities observed
+are the result of running a decision tree algorithm on the dataset, and that the
+decision tree can also be used to predict whether an individual survived the
+sinking of the Titanic.
+
+
+
+||Class                 |Gender         |Age Group      |Survival Probability   ||
+|| First Class          | Male          | 0-9           | 100.0                 ||
+|| First Class          | Male          | 10-29         | 36.364                ||
+|| First Class          | Male          | 30-49         | 44.681                ||
+|| First Class          | Male          | 50-80         | 20.69                 ||
+|| First Class          | Female        | 0-9           | 0.0                   ||
+|| First Class          | Female        | 10-29         | 97.368                ||
+|| First Class          | Female        | 30-49         | 100.0                 ||
+|| First Class          | Female        | 50-80         | 93.333                ||
+|| Second Class         | Male          | 0-9           | 100.0                 ||
+|| Second Class         | Male          | 10-29         | 6.383                 ||
+|| Second Class         | Male          | 30-49         | 10.256                ||
+|| Second Class         | Male          | 50-80         | 7.692                 ||
+|| Second Class         | Female        | 0-9           | 100.0                 ||
+|| Second Class         | Female        | 10-29         | 91.429                ||
+|| Second Class         | Female        | 30-49         | 92.593                ||
+|| Second Class         | Female        | 50-80         | 83.333                ||
+|| Third Class          | Male          | 0-9           | 38.095                ||
+|| Third Class          | Male          | 10-29         | 12.185                ||
+|| Third Class          | Male          | 30-49         | 12.821                ||
+|| Third Class          | Male          | 50-80         | 0.0                   ||
+|| Third Class          | Female        | 0-9           | 52.381                ||
+|| Third Class          | Female        | 10-29         | 54.639                ||
+|| Third Class          | Female        | 30-49         | 28.0                  ||
+|| Third Class          | Female        | 50-80         | 100.0                 ||
+'''
